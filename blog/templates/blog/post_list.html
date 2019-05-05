@@ -7,16 +7,24 @@
             <h1><a href="/">Yutaro38 Blog</a></h1>
         </div>
 
-        <div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+        
+        {{posts}}
             <p>published: 05.05.2019, 11:53</p>
             <h2><a href="">My first post</a></h2>
             <p>Aenean eu leo quam. こんにちは！ よろしくお願いします！ </p>
-        </div>
+        {{posts}}
 
-        <div>
+        {{posts}}
             <p>公開日: 2019/05/05, 11:53</p>
             <h2><a href="">2番目の投稿</a></h2>
             <p> こんにちは！ よろしくお願いします！ </p>
-        </div>
+        {{posts}}
     </body>
 </html>
